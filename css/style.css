@@ -184,7 +184,11 @@ body {
 
 /* HERO */
 .hero {
-    background: rgb(145, 145, 145);
+    background-image: url(../img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     padding: 4.5rem 2rem 3.5rem;
     position: relative;
     overflow: hidden;
@@ -287,66 +291,50 @@ body {
     color: var(--cian-principal);
 }
 /* --- SECCIÓN RECORRIDO --- */
-.recorrido-wrap {
-    /* Fondo principal de la sección con tu azul #153244 */
-    background-color: var(--azul-oscuro); 
-    padding: 4.5rem 2rem;
+.recorrido-section {
+    background: var(--azul-oscuro);
+    padding: 40px 50px 48px;
+    box-sizing: border-box;
     width: 100%;
 }
 
 .recorrido-inner {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Textos de la cabecera adaptados para contrastar sobre #153244 */
-.recorrido-header {
-    margin-bottom: 2.5rem;
-    color: var(--blanco); 
-    text-align: left;
-}
-
 .recorrido-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0 0 14px;
+    color: var(--blanco);
+    font-size: 31px;
+    line-height: 1.2;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
 }
 
-.recorrido-sub {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8); /* Blanco con opacidad para suavizar */
-    font-weight: 300;
-    max-width: 700px;
+.recorrido-intro {
+    max-width: 760px;
+    margin: 0 0 48px;
+    color: var(--blanco);
+    font-size: 16px;
     line-height: 1.5;
-}
-
-.recorrido-carousel {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    position: relative;
 }
 
 .recorrido-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
-/* Tarjetas con fondo blanco para despegarse del fondo oscuro */
 .recorrido-card {
-    background-color: var(--blanco);
+    position: relative;
+    min-width: 0;
+    min-height: 215px;
+    padding: 42px 34px 28px;
+    background: var(--blanco);
     border-radius: 8px;
-    padding: 2.5rem 1.5rem;
+    border-bottom: 11px solid var(--cian-principal);
+    box-sizing: border-box;
     text-align: center;
-    /* Acento de color inferior */
-    border-bottom: 12px solid var(--cian-principal);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.75rem;
     transition: transform 0.2s ease;
 }
 
@@ -354,21 +342,90 @@ body {
     transform: translateY(-4px);
 }
 
-/* Títulos internos retomando el azul del fondo para dar cohesión */
-.recorrido-card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
+.recorrido-numero {
+    position: absolute;
+    top: -26px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--cian-principal);
+    color: var(--azul-medio);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 800;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+.recorrido-card h3 {
+    margin: 0 0 15px;
     color: var(--azul-oscuro);
+    font-size: 17px;
     line-height: 1.3;
+    font-weight: 700;
 }
 
-.recorrido-card-body {
-    font-size: 0.95rem;
+.recorrido-card p {
+    margin: 0;
     color: var(--gris-texto);
+    font-size: 15px;
     line-height: 1.5;
-    font-weight: 400;
 }
 
+@media (max-width: 900px) {
+    .recorrido-section {
+        padding: 38px 32px 44px;
+    }
+
+    .recorrido-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 38px 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .recorrido-section {
+        padding: 32px 20px 38px;
+    }
+
+    .recorrido-title {
+        font-size: 26px;
+    }
+
+    .recorrido-intro {
+        margin-bottom: 44px;
+        font-size: 15px;
+    }
+
+    .recorrido-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .recorrido-card {
+        min-height: auto;
+        padding: 38px 24px 24px;
+    }
+
+    .recorrido-numero {
+        top: -23px;
+        left: 18px;
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+    }
+
+    .recorrido-card h3 {
+        font-size: 16px;
+    }
+
+    .recorrido-card p {
+        font-size: 14px;
+    }
+}
 
 /* --- FUNDAMENTACIÓN: LAYOUT WIREFRAME --- */
 .fundamentacion-layout {
@@ -589,16 +646,52 @@ body {
 }
 
 .cursos-inner {
-    max-width: 860px;
+    /* Ampliamos el contenedor para que las 4 tarjetas respiren bien */
+    max-width: 1200px; 
     margin: 0 auto;
+}
+
+/* Etiqueta principal de la sección */
+.cursos-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 0 1rem;
+    padding: .48rem 1rem;
+
+    background: var(--cian-principal);
+    border-radius: 999px;
+
+    color: var(--azul-medio);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
 .cursos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    /* Forzamos exactamente 4 columnas del mismo ancho */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    margin-top: 2.5rem;
 }
+/* --- RESPONSIVE PARA LOS CURSOS --- */
+/* En tablets, pasamos a 2 columnas para que no se aplasten los textos */
+@media (max-width: 1024px) {
+    .cursos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* En celulares, pasamos a 1 sola columna */
+@media (max-width: 600px) {
+    .cursos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .curso-card {
     background: #fff;
@@ -613,12 +706,22 @@ body {
 }
 
 .curso-tag {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+
+    margin-bottom: .65rem;
+    padding: .38rem .8rem;
+
+    background: rgba(142, 226, 214, 0.28);
+    border-radius: 999px;
+
+    color: var(--azul-medio);
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
+    line-height: 1;
     text-transform: uppercase;
-    color: var(--azul-medio);
-    margin-bottom: .65rem;
 }
 
 .curso-title {
@@ -693,76 +796,317 @@ body {
   box-shadow: 0 4px 10px rgba(142, 226, 214, 0.3); /* Sombra turquesa sutil */
 }
 
-/* TRAYECTO */
-/* .trayecto-wrap {
-    background: var(--azul-oscuro);
-    padding: 3.5rem 2rem;
+/* =========================================
+   DESAFÍOS PRÁCTICOS
+   ========================================= */
+
+.desafios-wrap {
+    width: 100%;
+    background: #ffffff;
+    padding: 64px 32px 56px;
+    box-sizing: border-box;
 }
 
-.trayecto-inner {
-    max-width: 860px;
+.desafios-inner {
+    width: 100%;
+    max-width: 1180px;
     margin: 0 auto;
 }
 
-.trayecto-steps {
-    display: flex;
-    gap: 0;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+.desafios-header {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    text-align: center;
 }
 
-.step {
-    flex: 1;
-    min-width: 110px;
-    padding: 1.25rem 1rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
+.desafios-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 7px 16px;
+    margin-bottom: 16px;
+    background: #dff9f6;
+    border-radius: 999px;
+    color: #003c55;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 
-.step:last-child {
-    border-right: none;
+.desafios-label i {
+    font-size: 17px;
 }
 
-.step-bar {
-    height: 3px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
-    position: relative;
+.desafios-title {
+    margin: 0 0 14px;
+    color: #003c55;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 750;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
 }
 
-.step-bar::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 3px;
-    background: var(--cian-principal);
+.desafios-title span {
+    color: #078982;
+}
+
+.desafios-intro {
+    max-width: 660px;
+    margin: 0 auto;
+    color: #657785;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.desafios-sectores {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
     width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.step-num {
-    font-size: 11px;
+.desafio-sector {
+    min-width: 0;
+    text-align: center;
+}
+
+.desafio-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    color: #003c55;
+}
+
+.desafio-icon i {
+    font-size: 31px;
+}
+
+.desafio-icon--servicios {
+    background: #d8faf3;
+}
+
+.desafio-icon--gastronomia {
+    background: #ffe4dc;
+}
+
+.desafio-icon--creativas {
+    background: #eee3ff;
+}
+
+.desafio-icon--construccion {
+    background: #dcefff;
+}
+
+.desafio-info h3 {
+    margin: 0 0 7px;
+    color: #002f46;
+    font-size: 15px;
     font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--cian-principal);
-    margin-bottom: .4rem;
-    display: block;
+    line-height: 1.3;
 }
 
-.step-verb {
-    font-size: 14px;
+.desafio-info p {
+    max-width: 220px;
+    margin: 0 auto;
+    color: #607482;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.desafios-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 38px;
+}
+
+.desafios-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 0 22px;
+    background: #73ddd3;
+    border-radius: 8px;
+    color: #003c55;
+    font-size: 13px;
     font-weight: 700;
-    color: #fff;
-    display: block;
-    margin-bottom: .3rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.step-curso {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 300;
+.desafios-btn i {
+    font-size: 18px;
+}
+
+.desafios-btn:hover {
+    background: #5dd3c8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 137, 130, 0.12);
+}
+
+.desafios-access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    color: #667986;
+    font-size: 12px;
     line-height: 1.4;
-} */
+    text-align: center;
+}
+
+.desafios-access i {
+    flex: 0 0 auto;
+    color: #70818d;
+    font-size: 18px;
+}
+
+@media (max-width: 900px) {
+    .desafios-wrap {
+        padding: 56px 24px 48px;
+    }
+
+    .desafios-sectores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 28px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 620px) {
+    .desafios-wrap {
+        padding: 48px 20px 42px;
+    }
+
+    .desafios-header {
+        margin-bottom: 30px;
+    }
+
+    .desafios-title {
+        font-size: 34px;
+    }
+
+    .desafios-intro {
+        font-size: 14px;
+    }
+
+    .desafios-sectores {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 420px;
+    }
+
+    .desafio-sector {
+        display: grid;
+        grid-template-columns: 52px minmax(0, 1fr);
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+    }
+
+    .desafio-icon {
+        width: 52px;
+        height: 52px;
+        margin: 0;
+    }
+
+    .desafio-icon i {
+        font-size: 24px;
+    }
+
+    .desafio-info h3 {
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .desafio-info p {
+        max-width: none;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .desafios-cta {
+        margin-top: 32px;
+    }
+
+    .desafios-btn {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+    .desafios-access {
+        max-width: 320px;
+        font-size: 11px;
+    }
+}
+
+/* Responsive para que las píldoras se apilen en pantallas más chicas */
+@media (max-width: 768px) {
+    .aplicacion-pildoras {
+        grid-template-columns: 1fr;
+    }
+    
+    .sector-pildora {
+        /* En móviles, suavizamos un poco el radio si el texto requiere más líneas */
+        border-radius: 30px; 
+    }
+}
+
+.sector-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sector-desc {
+    font-size: 12.5px;
+    color: var(--gris-texto);
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Contenedor del botón y texto inferior */
+.aplicacion-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--borde);
+    padding-top: 2rem;
+}
+
+.aplicacion-producto {
+    font-size: 12px;
+    color: var(--gris-texto);
+    font-weight: 300;
+}
+
+/* Responsive para que el pie se adapte en celulares */
+@media (max-width: 600px) {
+    .aplicacion-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
 
 /* METODOLOGÍA */
 .metodo-grid {
@@ -1018,4 +1362,72 @@ body {
     font-size: 13.5px;
     line-height: 1.6;
     font-weight: 300;
+}
+
+/* CTA METODOLOGÍA */
+.metodo-cta {
+    max-width: 750px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(117, 221, 211, 0.18);
+    border: 1px solid rgba(117, 221, 211, 0.55);
+    border-radius: 10px;
+}
+
+.metodo-cta-copy {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    min-width: 0;
+}
+
+.metodo-cta-copy strong {
+    color: var(--azul-oscuro);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.metodo-cta-copy span {
+    color: var(--gris-texto);
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 300;
+}
+
+.metodo-cta-btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 1rem;
+    background: var(--cian-principal);
+    color: var(--azul-oscuro);
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s ease, filter .2s ease;
+}
+
+.metodo-cta-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(.97);
+}
+
+@media (max-width: 620px) {
+    .metodo-cta {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .metodo-cta-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

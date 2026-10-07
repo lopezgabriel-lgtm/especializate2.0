@@ -37,7 +37,7 @@
                 <img src="./img/LOGO_AGENCIA-lineal blanco.png" width="300px">
                 <img src="./img/especIAlizate_logo-blanco.png" alt="Logo EspecIAlizate" class="hero-logo-img" width="">
 
-                <p class="hero-sub">Formación integral en Inteligencia Artificial aplicada al trabajo. Aprendé a usar IA
+                <p class="hero-sub">Formación integral en Inteligencia Artificial aplicada al trabajo. <br> Aprendé a usar IA
                     para resolver desafíos laborales, a tu ritmo y de forma gratuita</p>
                 <div class="hero-row">
                     <button class="btn-secondary" onclick="sendPrompt('Quiero conocer más sobre EspecIAlizate')">Conocé
@@ -49,36 +49,34 @@
             </div>
         </section>
         <!-- SECCIÓN RECORRIDO -->
-        <section class="recorrido-wrap" aria-labelledby="recorrido-title">
+        <section class="recorrido-section" aria-labelledby="recorrido-title">
             <div class="recorrido-inner">
-                <div class="recorrido-header">
-                    <h2 id="recorrido-title" class="recorrido-title">Vos elegís cómo hacer tu recorrido</h2>
-                    <p class="recorrido-sub">Podés comenzar por las bases, profundizar en herramientas específicas o
-                        completar todo el trayecto de formación.</p>
-                </div>
+                <h2 id="recorrido-title" class="recorrido-title">Vos elegís cómo hacer tu recorrido</h2>
 
-                <div class="recorrido-carousel">
+                <p class="recorrido-intro">Podés comenzar por las bases, profundizar en herramientas específicas o
+                    completar todo el trayecto de formación.</p>
 
+                <div class="recorrido-grid">
+                    <article class="recorrido-card">
+                        <span class="recorrido-numero" aria-hidden="true">1</span>
+                        <h3>Empezá desde cero</h3>
+                        <p>Conocé los fundamentos de la IA y aprendé a utilizarla en situaciones reales de trabajo, sin
+                            necesidad de experiencia previa.</p>
+                    </article>
 
-                    <div class="recorrido-grid">
-                        <article class="recorrido-card">
-                            <h3 class="recorrido-card-title">Empezá desde cero</h3>
-                            <p class="recorrido-card-body">Conocé los fundamentos de la IA y aprendé a utilizarla en
-                                situaciones reales de trabajo, sin necesidad de experiencia previa.</p>
-                        </article>
+                    <article class="recorrido-card">
+                        <span class="recorrido-numero" aria-hidden="true">2</span>
+                        <h3>Elegí en qué especializarte</h3>
+                        <p>Aprendé a usar IA en tu planilla de Sheets, creá contenido multimedia, automatizá procesos y
+                            aplicalo en tu área profesional.</p>
+                    </article>
 
-                        <article class="recorrido-card">
-                            <h3 class="recorrido-card-title">Elegí en qué especializarte</h3>
-                            <p class="recorrido-card-body">Formate en planillas inteligentes, creación multimedia,
-                                automatización de procesos y aplicaciones para distintas áreas profesionales.</p>
-                        </article>
-
-                        <article class="recorrido-card">
-                            <h3 class="recorrido-card-title">Aprendé a tu ritmo</h3>
-                            <p class="recorrido-card-body">Una propuesta 100 % online y autoasistida, con contenidos
-                                prácticos, actividades y recursos para avanzar con flexibilidad.</p>
-                        </article>
-                    </div>
+                    <article class="recorrido-card">
+                        <span class="recorrido-numero" aria-hidden="true">3</span>
+                        <h3>Aprendé a tu ritmo</h3>
+                        <p>Una propuesta 100 % online y autoasistida, con videos, lecturas, contenidos prácticos,
+                            actividades y recursos para avanzar con flexibilidad.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -134,7 +132,7 @@
         EL PROGRAMA--------->
         <section class="cursos-wrap" id="cursos" aria-labelledby="programa-title">
             <div class="cursos-inner">
-                <p class="sec-label">Cursos</p>
+                <p class="cursos-label">Cursos</p>
                 <h2 id="programa-title" class="sec-title">Cursos para aplicar la IA en el trabajo</h2>
                 <p>Una propuesta práctica para incorporar herramientas de inteligencia artificial, optimizar procesos,
                     mejorar la productividad y resolver desafíos concretos de distintos ámbitos profesionales.</p>
@@ -142,7 +140,7 @@
 
                     <article class="curso-card">
                         <p class="curso-tag">Curso 01</p>
-                        <h3 class="curso-title">Introducción a la Inteligencia Artificial</h3>
+                        <h3 class="curso-title">Introducción a la Inteligencia Artificial aplicada al trabajo</h3>
                         <p class="curso-desc">Entendé qué es la IA, cómo funciona y sus aplicaciones reales en el
                             trabajo y la vida cotidiana.</p>
                         <div class="curso-bottom">
@@ -158,7 +156,7 @@
                         <p class="curso-tag">Curso 02</p>
                         <h3 class="curso-title">Planillas Inteligentes con IA</h3>
                         <p class="curso-desc">Gestioná y analizá datos, automatizá tareas y construí dashboards de
-                            control asistidos por IA.</p>
+                            control en sheets asistido por IA.</p>
                         <div class="curso-bottom">
                             <div>
                                 <a href="#" class="btn-download"><i class="ti ti-download" aria-hidden="true"></i>
@@ -170,7 +168,7 @@
 
                     <article class="curso-card">
                         <p class="curso-tag">Curso 03</p>
-                        <h3 class="curso-title">Multimedia con IA</h3>
+                        <h3 class="curso-title">Creación de contenido con IA</h3>
                         <p class="curso-desc">Producí contenidos audiovisuales con prompting creativo, generación de
                             imágenes y video generativo.</p>
                         <div class="curso-bottom">
@@ -195,28 +193,91 @@
                             <div class="curso-producto">Ecosistema de trabajo con alertas</div>
                         </div>
                     </article>
-
-                    <article class="curso-card">
-                        <p class="curso-tag">Curso 05</p>
-                        <h3 class="curso-title">Casos Prácticos por Área Profesional</h3>
-                        <p class="curso-desc">Transferí lo aprendido a tu sector: educación, finanzas, marketing, salud
-                            o gestión.</p>
-                        <div class="curso-bottom">
-                            <div>
-                                <a href="#" class="btn-download"><i class="ti ti-download" aria-hidden="true"></i>
-                                    Descargar programa</a>
-                            </div>
-                            <div class="curso-producto">Proyecto aplicado a tu área</div>
-                        </div>
-                    </article>
-
                 </div>
             </div>
         </section>
+        <section class="desafios-wrap" id="desafios" aria-labelledby="desafios-title">
+            <div class="desafios-inner">
+
+                <header class="desafios-header">
+                    <div class="desafios-label">
+                        <i class="ti ti-school" aria-hidden="true"></i>
+                        <span>Después de egresar</span>
+                    </div>
+
+                    <h2 id="desafios-title" class="desafios-title">
+                        Desafíos <span>prácticos</span>
+                    </h2>
+
+                    <p class="desafios-intro">
+                        Accedé a un repositorio de desafíos guiados para aplicar lo aprendido en situaciones reales y resolver cada caso paso a paso y a tu ritmo.
+                    </p>
+                </header>
+
+                <div class="desafios-sectores" role="list" aria-label="Sectores disponibles">
+                    <article class="desafio-sector" role="listitem">
+                        <div class="desafio-icon desafio-icon--servicios">
+                            <i class="ti ti-briefcase" aria-hidden="true"></i>
+                        </div>
+                        <div class="desafio-info">
+                            <h3>Servicios empresariales</h3>
+                            <p>Procesos, productividad y toma de decisiones.</p>
+                        </div>
+                    </article>
+
+                    <article class="desafio-sector" role="listitem">
+                        <div class="desafio-icon desafio-icon--gastronomia">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                        </div>
+                        <div class="desafio-info">
+                            <h3>Gastronomía</h3>
+                            <p>Gestión, atención y comunicación.</p>
+                        </div>
+                    </article>
+
+                    <article class="desafio-sector" role="listitem">
+                        <div class="desafio-icon desafio-icon--creativas">
+                            <i class="ti ti-palette" aria-hidden="true"></i>
+                        </div>
+                        <div class="desafio-info">
+                            <h3>Industrias creativas</h3>
+                            <p>Contenidos y producción multimedia.</p>
+                        </div>
+                    </article>
+
+                    <article class="desafio-sector" role="listitem">
+                        <div class="desafio-icon desafio-icon--construccion">
+                            <i class="ti ti-building-arch" aria-hidden="true"></i>
+                        </div>
+                        <div class="desafio-info">
+                            <h3>Construcción</h3>
+                            <p>Planificación y gestión de proyectos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="desafios-cta">
+                    <a href="#" class="desafios-btn">
+                        <span>Conocé los desafíos</span>
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <p class="desafios-access">
+                        <i class="ti ti-lock" aria-hidden="true"></i>
+                        <span>Acceso disponible una vez que egreses de uno de nuestros cursos.</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
         <section class="section" id="metodologia" aria-labelledby="metodologia-title">
             <p class="sec-label">Metodología</p>
             <h2 id="metodologia-title" class="sec-title">Aprendés haciendo, a tu propio ritmo</h2>
-            <p class="sec-body" style="margin-bottom:0">Modalidad autoasistida: avanzás cuando querés, con materiales organizados por módulos, actividades prácticas, proyectos de aplicación y cuestionarios de evaluación.</p>
+            <p class="sec-body" style="margin-bottom:0">Modalidad autoasistida: avanzás cuando querés, con materiales
+                organizados por módulos, actividades prácticas, proyectos de aplicación y cuestionarios de evaluación.
+            </p>
+
             <div class="metodo-grid">
                 <article class="met-card">
                     <i class="ti ti-player-play met-icon" aria-hidden="true"></i>
@@ -224,24 +285,39 @@
                     <p class="met-body">Contenidos pensados para avanzar a tu propio ritmo de manera clara y flexible.
                     </p>
                 </article>
+
                 <article class="met-card">
                     <i class="ti ti-terminal met-icon" aria-hidden="true"></i>
                     <h3 class="met-title">Prompts guiados con IA</h3>
-                    <p class="met-body">Guías paso a paso para practicar con distintas herramientas de inteligencia artificial y aplicarlas en situaciones concretas.</p>
+                    <p class="met-body">Guías paso a paso para practicar con distintas herramientas de inteligencia
+                        artificial y aplicarlas en situaciones concretas.</p>
                 </article>
+
                 <article class="met-card">
                     <i class="ti ti-file-download met-icon" aria-hidden="true"></i>
                     <h3 class="met-title">Actividades prácticas y proyectos</h3>
-                    <p class="met-body">Ejercicios, plantillas y propuestas de aplicación para trasladar lo aprendido a situaciones reales de tu ámbito profesional.</p>
+                    <p class="met-body">Ejercicios, plantillas y propuestas de aplicación para trasladar lo aprendido a
+                        situaciones reales de tu ámbito profesional.</p>
                 </article>
+
                 <article class="met-card">
                     <i class="ti ti-award met-icon" aria-hidden="true"></i>
                     <h3 class="met-title">Cuestionarios de evaluación</h3>
-                    <p class="met-body">Cada módulo finaliza con un cuestionario para verificar los aprendizajes. Al completar el curso, realizás una evaluación final integradora.</p>
+                    <p class="met-body">Cada módulo finaliza con un cuestionario para verificar los aprendizajes. Al
+                        completar el curso, realizás una evaluación final integradora.</p>
                 </article>
+            </div>
+
+            <div class="metodo-cta">
+                <div class="metodo-cta-copy">
+                    <strong>¿Listo para empezar?</strong>
+                    <span>Elegí el curso que mejor se adapte a vos y empezá a incorporar IA a tu trabajo.</span>
+                </div>
+                <a href="#inscripcion" class="metodo-cta-btn">¡Inscribite acá!</a>
             </div>
         </section>
         <hr class="divider">
+
         <!-- SECCIÓN PREGUNTAS FRECUENTES -->
         <section class="faq-wrap" id="faq" aria-labelledby="faq-title">
             <div class="faq-inner">
@@ -260,8 +336,10 @@
                         </button>
                         <div class="faq-answer">
                             <div class="faq-answer-inner">
-                                No. Los cursos están pensados para personas que comienzan a incorporar herramientas de
-                                IA en su trabajo.
+                                No. Si todavía no tenés conocimientos previos en Inteligencia Artificial, te recomendamos
+                                comenzar por el curso <strong>Introducción a la Inteligencia Artificial aplicada al trabajo</strong>,
+                                pensado para incorporar las bases y empezar a utilizar estas herramientas en situaciones
+                                reales de trabajo.
                             </div>
                         </div>
                     </div>
@@ -360,7 +438,10 @@
                         </button>
                         <div class="faq-answer">
                             <div class="faq-answer-inner">
-                                Durante el recorrido se utilizan distintas herramientas a modo de ejemplo, priorizando sus versiones gratuitas y considerando las limitaciones propias de cada plan. La elección y eventual contratación de versiones pagas dependerá de las necesidades y preferencias de cada estudiante.
+                                Durante el recorrido se utilizan distintas herramientas a modo de ejemplo, priorizando
+                                sus versiones gratuitas y considerando las limitaciones propias de cada plan. La
+                                elección y eventual contratación de versiones pagas dependerá de las necesidades y
+                                preferencias de cada estudiante.
                             </div>
                         </div>
                     </div>
